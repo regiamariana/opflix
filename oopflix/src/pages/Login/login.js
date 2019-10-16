@@ -1,5 +1,5 @@
 import React,{ Component } from "react";
-
+import "../Login/login.css"
 import Axios from "axios";
 
 export default class Login extends Component{
@@ -45,7 +45,7 @@ export default class Login extends Component{
 
     render(){
         return(
-            <section>
+            <section id="mare">
 
             <h1>Tela de login</h1>
 

@@ -3,7 +3,7 @@ import '../Comecar/comecar.css'
 export default class Comecar extends Component{
     render(){
         return(
-            <section>
+            <section id="principal"> 
             <div id="listra">
         
             <div id="quadrobranco">

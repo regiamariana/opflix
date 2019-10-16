@@ -1,0 +1,103 @@
+import React, { Component } from "react";
+import "../Filmes/filmes.css"
+import Axios from "axios";
+
+export default class Filmes extends Component {
+    constructor() {
+        super();
+        this.state = {
+            lancamentos: [],
+            id: ""
+        }
+    }
+
+
+    //funciona como window.onload
+    //serve para carregar algo assim q a tela roda
+    componentDidMount() {
+        this.listarLancamentos();
+
+    }
+
+    listarLancamentos = () => {
+        Axios.get('http://localhost:5000/api/lancamentos')
+            .then(response => {
+                console.log(response.data);
+                this.setState({ lancamentos: response.data })
+            })
+            .catch(erro => console.log(erro))
+
+    }
+
+    mudarEstadoId =(event)=>{
+        this.setState({id: event.target.value});
+        console.log(this.state.id);
+    }
+
+
+    listarPorId = () =>{
+        Axios.get('http://localhost:5000/api/lancamentos/'+ this.state.id)
+        .then(response => {
+            this.setState({lancamentos: response.data})
+            console.log(this.state.lancamentos);
+        })
+        .catch(erro => console.log(erro))
+    }
+
+    render() {
+        return (
+            <section>
+                <h1>pg de filme</h1>
+
+
+                <input 
+                type="text"
+                onChange={this.mudarEstadoId}
+
+                />
+                <button
+                onClick={this.listarPorId}
+                >
+                procurar
+                </button>
+
+                <table id="tabela-lista">
+                    <thead>
+                        <tr>
+
+                            <th>título</th>
+                            <th>sinopse</th>
+                            <th>categoria</th>
+                            <th>tipo</th>
+                            <th>tempo de duração</th>
+                            <th>data de lançamento</th>
+                            <th>plataforma</th>
+                            <th>classificação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabela-lista-corpo">
+                        {/* {this.state.lancamentos.idLancamento} */}
+                        {this.state.lancamentos.map(element => {
+                            return (
+                                <tr key={element.idlancamentos}>
+                                    <td>{element.titulo}</td>
+                                    <td>{element.sinopse}</td>
+                                    <td>{element.idcategoria1}</td>
+                                    <td>{element.idtipo}</td>
+                                    <td>{element.tempoduracao}</td>
+                                    <td>{element.datalancamento}</td>
+                                    <td>{element.idplataforma}</td>
+                                    <td>{element.idclassificacao}</td>
+
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
+
+                
+            </section>
+        )
+    }
+}

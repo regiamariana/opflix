@@ -37,11 +37,11 @@ const routing =(
             <Switch>
                 <Route exact path='/' component={App} />
                 {/* <Route path='/comecar' component={Comecar} /> */}
-                <RotaPrivada path='/filmes' component={Filmes} />
-                <RotaPrivada path='/series' component={Series} />
+                <Route path='/filmes' component={Filmes} />
+                <Route path='/series' component={Series} />
                 <Route path='/login' component={Login} />
                 <Route path='/cadastrar' component={Cadastrar} />
-                <Route path='/comecar' component={Comecar} />
+                <RotaPrivada path='/comecar' component={Comecar} />
             </Switch>
         </div>
     </Router>
