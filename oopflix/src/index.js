@@ -41,6 +41,7 @@ const routing =(
                 <RotaPrivada path='/series' component={Series} />
                 <Route path='/login' component={Login} />
                 <Route path='/cadastrar' component={Cadastrar} />
+                <Route path='/comecar' component={Comecar} />
             </Switch>
         </div>
     </Router>

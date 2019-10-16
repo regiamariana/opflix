@@ -1,0 +1,80 @@
+*{
+    background: black;
+}
+
+#listra{
+    
+    width: 500px;
+    height: 800px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    background-image: url(https://docs.substance3d.com/sddoc/files/159450981/159450980/1/1496152369146/stripes.png);
+}
+
+#quadrobranco{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 60px;;
+    left: 30px;
+}
+
+#texto{
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    
+    left: 50px;
+}
+
+#texto > h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:black;
+    font-size: 30px;
+    background-color: white;
+}
+#texto > h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:maroon;
+    font-size: 70px;
+    background-color: white;
+    
+}
+
+
+
+#listra2{
+    
+    width: 500px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    background-image: url(https://docs.substance3d.com/sddoc/files/159450981/159450980/1/1496152369146/stripes.png);
+}
+
+#quadrobranco2{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    bottom: 60px;;
+    right: 30px;
+}
+
+#texto2{
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    
+    left: 20px;
+}
+
+#texto2 > h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:maroon;
+    font-size: 35px;
+    background-color: white;
+}
