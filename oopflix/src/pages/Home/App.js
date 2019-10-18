@@ -9,14 +9,14 @@ import flechinha from '../../assets/flechinha.png';
 function App() {
   return (
     <div className="App">
-      <Link to="/login">[Login]</Link>
+      <Link to="/">[Login]</Link>
       <Link to="/cadastrar">[Cadastrar]</Link>
 
-      <img src={fundo} />
+      {/* <img src={fundo} /> */}
       <h1>OpFlix</h1>
 
       <nav>
-        <Link to="/">[Home]</Link>
+        <Link to="/principal">[Home]</Link>
         <Link to="/filmes">[Filmes]</Link>
         <Link to="/series">[Series]</Link>
         <Link to="/cinema">[Cinema]</Link>
