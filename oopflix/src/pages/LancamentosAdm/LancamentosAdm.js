@@ -24,11 +24,12 @@ export default class Lancamentos extends Component{
     }
 
     listarLancamentos = () => {
-        Axios.get('http://localhost:5000/api/lancamentos', {headers: {Authorization: "Bearer "+ localStorage.getItem("usuario-opflix")}})
+        Axios.get('http://localhost:5000/api/lancamentos', {headers: {'Authorization': "Bearer "+ localStorage.getItem("usuario-opflix")}})
             .then(response => {
                 console.log(response.data);
                 this.setState({ lancamentos: response.data })
             })
+            
             .catch(erro => console.log(erro))
 
     }
@@ -83,8 +84,14 @@ export default class Lancamentos extends Component{
             tempoduracao: this.state.tempoduracao,
             datalancamento: this.state.datalancamento,
             idplataforma: this.state.idplataforma,
-            idclassificacao: this.state.idclassificacao,
+            idclassificacao: this.state.idclassificacao
 
+        })
+        .then(response => this.listarLancamentos())
+        
+        .catch(erro=>{
+            this.setState({erro: "ops, tente novamente"});
+            console.log(erro);
         })
     }
 
@@ -94,12 +101,12 @@ export default class Lancamentos extends Component{
             <section>
                 <h1>Gestão de Lançamentos</h1>
 
-                <h3>Lista de filmes</h3>
+                <h3>Lista de lancamentos</h3>
 
                 <table id="tabela-lista">
                     <thead>
                         <tr>
-
+                            
                             <th>título</th>
                             <th>sinopse</th>
                             <th>categoria</th>
@@ -114,7 +121,7 @@ export default class Lancamentos extends Component{
                     <tbody id="tabela-lista-corpo">
                         {/* {this.state.lancamentos.idLancamento} */}
                         {this.state.lancamentos.map(element => {
-                            if (element.idtipo === 1) {
+                            
                                 
                                 return (
                                     <tr key={element.idlancamentos}>
@@ -129,11 +136,74 @@ export default class Lancamentos extends Component{
     
                                     </tr>
                                 )
-                            }
+                            
                         })}
                     </tbody>
                 </table>
 
+                <h3>Cadastrar lançamento</h3>
+                
+                <form onSubmit={this.efetuarCadastro}>
+                        <input
+                        type="text"
+                        placeholder="insira seu título"
+                        onChange={this.mudarEstadoTitulo}
+                        value={this.state.titulo}
+                        />
+                        <input
+                        type="text"
+                        placeholder="insira sua sinopse"
+                        onChange={this.mudarEstadoSinopse}
+                        value={this.state.sinopse}
+                        />
+                        <input
+                        type="text"
+                        placeholder="insira seu id categoria"
+                        onChange={this.mudarEstadoIdCategoria}
+                        value={this.state.idcategoria}
+                        />
+                        <input
+                        type="text"
+                        placeholder="insira seu id tipo"
+                        onChange={this.mudarEstadoIdTipo}
+                        value={this.state.idtipo}
+                        />
+                        <input
+                        type="text"
+                        placeholder="insira seu tempo de duração"
+                        onChange={this.mudarEstadoTempoDuracao}
+                        value={this.state.tempoduracao}
+                        />
+                        <input
+                        type="text"
+                        placeholder="insira sua data de lançamento"
+                        onChange={this.mudarEstadoDataLacamento}
+                        value={this.state.datalancamento}
+                        />
+                        <input
+                        type="text"
+                        placeholder="insira seu id da plataforma"
+                        onChange={this.mudarEstadoIdPlataforma}
+                        value={this.state.idplataforma}
+                        />
+                        <input
+                        type="text"
+                        placeholder="insira sua classificação"
+                        onChange={this.mudarEstadoIdClassificacao}
+                        value={this.state.idclassificacao}
+                        />
+
+                        <button>
+                            cadastrar
+                        </button>
+
+                        <p>
+                        {this.state.erro}
+                        </p>
+                        
+                        
+
+                </form>
                 
             </section>
         )

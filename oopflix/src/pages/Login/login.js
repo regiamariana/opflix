@@ -57,37 +57,61 @@ export default class Login extends Component{
 
     render(){
         return(
+            
             <section id="mare">
+                <main>
 
-            <h1>Tela de login</h1>
+            <div id="zebra">
+                <div id="branquinho">
+                    <div id="text">
 
-            <form onSubmit={this.efetuarLogin}>
-                <input 
-                type="text"
-                placeholder="insira seu email"
-                onChange={this.mudarEstadoEmail}
-                value={this.state.email}
-                />
-                <input 
-                type="password"
-                placeholder="insira sua senha"
-                onChange={this.mudarEstadoSenha}
-                value={this.state.senha}
-                />
+                        <h1 id="title">[Fazer Login]</h1>
+                    </div>
+                </div>
+            </div>
 
-                <button>
-                    Login
-                </button>
 
-                <p>
-                    {this.state.erro}
-                </p>
-            </form>
+            <div id="zebra2">
+                <div id="branquinho2">
+
+                    <form onSubmit={this.efetuarLogin}>
+                        <div id="cinzinha1">
+                                <input 
+                                type="text"
+                                placeholder="insira seu email"
+                                id="input1"
+                                onChange={this.mudarEstadoEmail}
+                                value={this.state.email}
+                                />
+                        </div>
+                           <div id="cinzinha2">
+                                <input 
+                                id="input2"
+                                type="password"
+                                placeholder="insira sua senha"
+                                onChange={this.mudarEstadoSenha}
+                                value={this.state.senha}
+                                />
+                           </div>
+                            
+                           <div id="botones">
+                           <button>
+                            Login
+                            </button>
+
+                           </div>
+                            
+            
+                             <p>
+                                {this.state.erro}
+                            </p> 
+                        </form>
+                </div>
+            </div>
+                </main>
 
 
             </section>
-
-
         );
 
 

@@ -64,7 +64,7 @@ export default class Filmes extends Component {
                 <table id="tabela-lista">
                     <thead>
                         <tr>
-
+                           
                             <th>título</th>
                             <th>sinopse</th>
                             <th>categoria</th>

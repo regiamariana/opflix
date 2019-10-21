@@ -33,12 +33,12 @@ export default class Cadastrar extends Component{
             email: this.state.email,
             senha: this.state.senha,
             telefone: this.state.telefone,
-            idtipousuario: 1
+            idtipousuario: 2
            
         })
         .then(data => {
             if(data.status === 200){
-                this.props.history.push('/login')
+                this.props.history.push('/')
             }else{
                 console.log("erro")
             }

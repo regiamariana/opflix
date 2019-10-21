@@ -12,6 +12,7 @@ import Cadastrar from './pages/Cadastrar/cadastrar';
 import Adm from './pages/pgAdm/pgadm';
 import Usuario from './pages/pgUsuario/pgusuario';
 import LancamentosAdm from './pages/LancamentosAdm/LancamentosAdm';
+import CategoriaAdm from './pages/CategoriaAdm/categoriaadm';
 
 
 import { Route, Link, BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
@@ -47,6 +48,7 @@ const routing =(
                 <Route path='/netflix' component={Netflix}/>
                 <Route path='/adm' component={Adm} />
                 <Route path='/lancamentosadm' component={LancamentosAdm} />
+                <Route path='/categoriaadm' component={CategoriaAdm} />
             </Switch>
         </div>
     </Router>
