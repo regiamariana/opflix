@@ -1,20 +1,24 @@
 import React, { Component } from "react";
-import "../Filmes/filmes.css"
 import Axios from "axios";
 
-export default class Filmes extends Component {
-    constructor() {
+export default class Lancamentos extends Component{
+    constructor(){
         super();
-        this.state = {
+        this.state ={
             lancamentos: [],
-            id: ""
+            id: "",
+            titulo: "",
+            sinopse: "",
+            idcategoria: "",
+            idtipo: "",
+            tempoduracao: "",
+            datalancamento: "",
+            idplataforma: "",
+            idclassificacao: "",
         }
     }
 
-
-    //funciona como window.onload
-    //serve para carregar algo assim q a tela roda
-    componentDidMount() {
+    componentDidMount(){
         this.listarLancamentos();
 
     }
@@ -29,37 +33,68 @@ export default class Filmes extends Component {
 
     }
 
-    mudarEstadoId =(event)=>{
-        this.setState({id: event.target.value});
-        console.log(this.state.id);
-    }
+    // mudarEstadoId =(event)=>{
+    //     this.setState({id: event.target.value});
+    //     console.log(this.state.id);
+    // }
 
 
-    listarPorId = () =>{
-        Axios.get('http://localhost:5000/api/lancamentos/'+ this.state.id)
-        .then(response => {
-            this.setState({lancamentos: response.data})
-            console.log(this.state.lancamentos);
+    // listarPorId = () =>{
+    //     Axios.get('http://localhost:5000/api/lancamentos/'+ this.state.id)
+    //     .then(response => {
+    //         this.setState({lancamentos: response.data})
+    //         console.log(this.state.lancamentos);
+    //     })
+    //     .catch(erro => console.log(erro))
+    // }
+
+    mudarEstadoTitulo = (event) =>{
+        this.setState({titulo: event.target.value})
+    };
+    mudarEstadoSinopse = (event) =>{
+        this.setState({sinopse: event.target.value})
+    };
+    mudarEstadoIdCategoria = (event) =>{
+        this.setState({idcategoria: event.target.value})
+    };
+    mudarEstadoIdTipo = (event) =>{
+        this.setState({idtipo: event.target.value})
+    };
+    mudarEstadoTempoDuracao = (event) =>{
+        this.setState({tempoduracao: event.target.value})
+    };
+    mudarEstadoDataLacamento = (event) =>{
+        this.setState({datalancamento: event.target.value})
+    };
+    mudarEstadoIdPlataforma = (event) =>{
+        this.setState({idplataforma: event.target.value})
+    };
+    mudarEstadoIdClassificacao = (event) =>{
+        this.setState({idclassificacao: event.target.value})
+    };
+
+    efetuarCadastro = (event) =>{
+        event.preventDefault();
+        Axios.post("http://localhost:5000/api/lancamentos",{
+            titulo: this.state.titulo,
+            sinopse: this.state.sinopse,
+            idcategoria: this.state.idcategoria,
+            idtipo: this.state.idtipo,
+            tempoduracao: this.state.tempoduracao,
+            datalancamento: this.state.datalancamento,
+            idplataforma: this.state.idplataforma,
+            idclassificacao: this.state.idclassificacao,
+
         })
-        .catch(erro => console.log(erro))
     }
 
-    render() {
+
+    render(){
         return (
             <section>
-                <h1>pg de filme</h1>
+                <h1>Gestão de Lançamentos</h1>
 
-
-                {/* <input 
-                type="text"
-                onChange={this.mudarEstadoId}
-
-                />
-                <button
-                onClick={this.listarPorId}
-                >
-                procurar
-                </button> */}
+                <h3>Lista de filmes</h3>
 
                 <table id="tabela-lista">
                     <thead>

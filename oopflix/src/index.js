@@ -11,6 +11,8 @@ import Login from './pages/Login/login';
 import Cadastrar from './pages/Cadastrar/cadastrar';
 import Adm from './pages/pgAdm/pgadm';
 import Usuario from './pages/pgUsuario/pgusuario';
+import LancamentosAdm from './pages/LancamentosAdm/LancamentosAdm';
+
 
 import { Route, Link, BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 
@@ -23,8 +25,7 @@ const RotaPrivada = ({component: Component}) =>(
         (
             <Component {...props} />
         ) : (
-            <Redirect 
-            to={{pathname: "/login", state: {from: props.location}}}
+            <Redirect to={{pathname: "/login", state: {from: props.location}}}
             />
         )
     }
@@ -35,12 +36,17 @@ const routing =(
     <Router>
         <div>
             <Switch>
-                <Route exact path='/' component={App} />
+                <Route exact path='/' component={Login} />
                 {/* <Route path='/comecar' component={Comecar} /> */}
                 <RotaPrivada path='/filmes' component={Filmes} />
-                <RotaPrivada path='/series' component={Series} />
-                <Route path='/login' component={Login} />
+                <Route path='/series' component={Series} />
+                <Route path='/principal' component={App} />
                 <Route path='/cadastrar' component={Cadastrar} />
+                <RotaPrivada path='/comecar' component={Comecar} />
+                <Route path='/cinema' component={Cinema}/>
+                <Route path='/netflix' component={Netflix}/>
+                <Route path='/adm' component={Adm} />
+                <Route path='/lancamentosadm' component={LancamentosAdm} />
             </Switch>
         </div>
     </Router>

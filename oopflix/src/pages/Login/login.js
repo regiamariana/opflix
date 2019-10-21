@@ -1,5 +1,6 @@
 import React,{ Component } from "react";
-
+import "../Login/login.css"
+import {ParseJwt} from "../../services/auth";
 import Axios from "axios";
 
 export default class Login extends Component{
@@ -31,7 +32,18 @@ export default class Login extends Component{
         .then(data => {
             if(data.status === 200){
                 localStorage.setItem("usuario-opflix", data.data.token);
-                this.props.history.push('/')
+                // parsetjwt
+                // que voce pegue as informacoes de dentro do token -
+
+
+                if (ParseJwt().permissao === 'ADM') {
+                    this.props.history.push('/adm')
+                }else{
+                    this.props.history.push('/principal')
+                }
+
+                console.log(ParseJwt());
+                
             }else{
                 console.log("erro")
             }
@@ -45,7 +57,7 @@ export default class Login extends Component{
 
     render(){
         return(
-            <section>
+            <section id="mare">
 
             <h1>Tela de login</h1>
 
