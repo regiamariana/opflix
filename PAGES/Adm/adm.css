@@ -1,0 +1,107 @@
+/* #principal{
+    background: black;
+    width: 100%;
+    height: 100vh;
+} */
+
+body{
+    background-color: black;
+}
+
+
+#zebra1{
+    background-image: url("https://docs.substance3d.com/sddoc/files/159450981/159450980/1/1496152369146/stripes.png");
+    position: absolute;
+    width: 600px;
+    height: 250px;
+    left: 0;
+    top: 0;
+}
+
+#quadrovermelho1{
+    position: absolute;
+    width: 670px;
+    height: 120px;
+    background-color: maroon;
+    left: 0;
+    top: 60px;
+}
+
+#text{
+    position: absolute;
+    left: 70px;;
+    top: -45px;
+}
+
+#text > h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:white;
+    font-size: 70px;
+}
+
+#zebra2{
+    background-image: url("https://docs.substance3d.com/sddoc/files/159450981/159450980/1/1496152369146/stripes.png");
+    position: absolute;
+    width: 1100px;
+    /* height: 300px; */
+    height: 350px;
+    left: 85px;
+    top: 400px;
+}
+
+
+#quadrobranco{
+    position: absolute;
+    background-color: white;
+    width: 1100px;
+    /* height: 300px; */
+    height: 300px;
+    left: 0px;
+    top: 25px;
+}
+
+a {
+    color: maroon;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Trebuchet MS','Be Vietnam', sans-serif;
+    
+}
+
+#link1{
+    position: absolute;
+    top: 70px;
+    left: 100px;
+}
+
+#link2{
+    position: absolute;
+    top: 180px;
+    left: 100px;
+}
+
+
+#link3{
+    position: absolute;
+    top: 70px;
+    left: 430px;
+}
+
+#link4{
+    position: absolute;
+    top: 180px;
+    left: 430px;
+}
+
+
+#link5{
+    position: absolute;
+    top: 70px;
+    left: 800px;
+}
+
+#link6{
+    position: absolute;
+    top: 180px;
+    left: 800px;
+}
