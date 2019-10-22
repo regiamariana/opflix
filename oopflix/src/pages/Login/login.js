@@ -94,12 +94,12 @@ export default class Login extends Component{
                                 />
                            </div>
                             
-                           <div id="botones">
-                           <button>
+                           
+                           <button id="botones">
                             Login
                             </button>
 
-                           </div>
+                           
                             
             
                              <p>

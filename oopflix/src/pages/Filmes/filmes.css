@@ -1,3 +1,48 @@
-section{
-    background-color: white;
+#principalf{
+    background: black;
+    width: 100%;
+    height: 500vh;
 }
+
+table#tabela-lista{
+    
+    position: absolute;
+    top: 300px;
+    border-collapse: collapse;
+    
+    
+    
+}
+#tabela-lista th,  #tabela-lista td, #tabela-lista tr{
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    font-size: 25px;
+    border: 1px solid #fff;
+}
+
+#tabela-lista td, #tabela-lista tr{
+    text-align: center;
+    
+  vertical-align: top;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+}
+
+#sinopse{
+    width: 20px;
+}
+
+#titulo{
+    width: 20px;
+}
+#tp{
+    width: 200px;
+}
+#dl{
+    width: 200px;
+}
+/* th {
+    text-align: left;
+  } */

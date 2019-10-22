@@ -27,13 +27,13 @@ body{
     top: 60px;
 }
 
-#text{
+#textt{
     position: absolute;
     left: 70px;;
     top: -45px;
 }
 
-#text > h1{
+#textt > #h1adm{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color:white;
     font-size: 70px;

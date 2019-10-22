@@ -1,7 +1,7 @@
 import React,{ Component } from "react";
 
 import Axios from "axios";
-
+import "../Cadastrar/cadastrar.css";
 export default class Cadastrar extends Component{
     constructor(){
         super();
@@ -51,43 +51,72 @@ export default class Cadastrar extends Component{
 
     render(){
         return(
-            <section>
-                <h1>Tela de cadastro</h1>
+            <section id="principalcadastro">
+                <div id="zebra">
+                <div id="branquinho">
+                    <div id="text">
+
+                        <h1 id="title">[Fazer Login]</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div id="zebrac">
+                <div id="branquinhoc">
                 
                 <form onSubmit={this.efetuarCadastro}>
+                    <div>
+
                     <input 
+                     id="ac"
                     type="text"
                     placeholder="insira seu nome completo"
                     onChange={this.mudarEstadoNome}
                     value={this.state.nome}
                     />
+                    </div>
+                    <div >
                     <input 
+                    id="bc"
                     type="text"
                     placeholder="insira seu email"
                     onChange={this.mudarEstadoEmail}
                     value={this.state.email}
                     />
+                    </div>
+                    <div >
                     <input 
+                    id="cc"
                     type="password"
                     placeholder="insira sua senha"
                     onChange={this.mudarEstadoSenha}
                     value={this.state.senha}
                     />
-                    <input 
+                    </div>
+                    <div >
+                    <input
+                    id="dc" 
                     type="text"
                     placeholder="insira seu telefone"
                     onChange={this.mudarEstadoTelefone}
                     value={this.state.telefone}
                     />
-
-                    <button>
+                    </div>
+                    
+                    
+                    
+                    
+                    <button id="botonesc">
                         Cadastrar
                     </button>
+                    
 
                     <p>
                         {this.state.erro}
                     </p>
                 </form>
+                </div>
+            </div>
 
             </section>
         )
