@@ -56,7 +56,7 @@ export default class Cadastrar extends Component{
                 <div id="branquinho">
                     <div id="text">
 
-                        <h1 id="title">[Fazer Login]</h1>
+                        <h1 id="title">[Cadastrar]</h1>
                     </div>
                 </div>
             </div>

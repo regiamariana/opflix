@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import "../CategoriaAdm/categoria.css"
 
 export default class Categorias extends Component{
     constructor(){
@@ -26,18 +27,28 @@ export default class Categorias extends Component{
 
     render(){
         return(
-            <section>
-                <table>
+            <section id="principalcc">
+
+            <div id="zebrah1">
+            <div id="quadrovermelhog">
+                <div id="textt">
+
+                    <h1 id="h1adm">[Gestão de Categorias]</h1>
+                </div>
+            </div>
+            </div>
+            <div id="zebrah">
+            <table id="table">
                     <thead>
                         <tr>
-                        <th>#</th>
-                        <th>Categoria</th>
+                        <th id="aigabi">#</th>
+                        <th id="soquemviveu">Categoria</th>
                         {/* <th>lancamentos</th> */}
                         </tr>
                         
                     </thead>
 
-                    <tbody>
+                    <tbody >
                         {this.state.categorias.map(element => {
                             return(
                                 <tr key={element.idcategoria}>
@@ -49,6 +60,8 @@ export default class Categorias extends Component{
                         })}
                     </tbody>
                 </table>
+            </div>
+                
             </section>
         )
     }

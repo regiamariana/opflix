@@ -6,7 +6,7 @@ export default class Comecar extends Component{
             <section id="principal"> 
             <div id="listra">
         
-            <div id="quadrobranco">
+            <div id="quadrobrancoh">
             <div id="texto">
                  <h2 >
                     MAS O QUE É

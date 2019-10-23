@@ -1,10 +1,10 @@
-#principalf{
+#principalcc{
     background: black;
     width: 100%;
-    height: 900vh;
+    height: 120vh;
 }
 
-table#tabela-lista{
+table#table{
     
     position: absolute;
     top: 300px;
@@ -13,19 +13,31 @@ table#tabela-lista{
     
     
 }
-#tabela-lista th,  #tabela-lista td, #tabela-lista tr{
+
+#table{
+    position: absolute;
+    left: 530px;
+
+    /* margin: auto; */
+}
+
+#table th,  #table td, #table tr{
     text-align: center;
-    
+    vertical-align: top;
+    height: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #fff;
     font-size: 25px;
+    border-collapse: collapse;
     border: 1px solid #fff;
+    margin: auto;
 }
-#tabela-lista th{
+#table th{
     background-color: maroon;
 }
 
-#tabela-lista td, #tabela-lista tr{
+
+#table td, #table tr{
     text-align: center;
     
   vertical-align: top;
@@ -33,20 +45,11 @@ table#tabela-lista{
     color: #fff;
 }
 
-#sinopse{
-    width: 20px;
+#aigabi{
+    width: 90px;
+    vertical-align: top;
     
 }
 
-#titulo{
-    width: 20px;
-}
-#tp{
-    width: 200px;
-}
-#dt{
-    width: 200px;
-}
-/* th {
-    text-align: left;
-  } */
+
+

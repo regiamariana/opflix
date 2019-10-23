@@ -78,7 +78,7 @@ export default class Filmes extends Component {
                             <th>categoria</th>
                             <th>tipo</th>
                             <th id="tp">tempo de duração</th>
-                            <th id="dl">data de lançamento</th>
+                            <th id="dt">data de lançamento</th>
                             <th>plataforma</th>
                             <th>classificação</th>
                         </tr>

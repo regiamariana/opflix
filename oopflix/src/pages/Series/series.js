@@ -46,8 +46,15 @@ export default class Filmes extends Component {
 
     render() {
         return (
-            <section>
-                <h1>pg de séries</h1>
+            <section id="principalf">
+                <div id="zebrah1">
+            <div id="quadrovermelho1">
+                <div id="textt">
+
+                    <h1 id="h1adm">[Séries]</h1>
+                </div>
+            </div>
+            </div>
 
 
                 {/* <input 
@@ -65,12 +72,12 @@ export default class Filmes extends Component {
                     <thead>
                         <tr>
 
-                            <th>título</th>
-                            <th>sinopse</th>
+                        <th id="titulo">título</th>
+                            <th >sinopse</th>
                             <th>categoria</th>
                             <th>tipo</th>
-                            <th>tempo de duração</th>
-                            <th>data de lançamento</th>
+                            <th id="tp">tempo de duração</th>
+                            <th id="dt">data de lançamento</th>
                             <th>plataforma</th>
                             <th>classificação</th>
                         </tr>

@@ -1,7 +1,7 @@
 #principal{
     background: black;
     width: 100%;
-    height: 110vh;
+    
 }
 
 #listra{
@@ -14,7 +14,7 @@
     background-image: url(https://docs.substance3d.com/sddoc/files/159450981/159450980/1/1496152369146/stripes.png);
 }
 
-#quadrobranco{
+#quadrobrancoh{
     background-color: white;
     width: 500px;
     height: 300px;
