@@ -16,7 +16,7 @@ export default class Categorias extends Component{
     }
 
     listarCategorias = () =>{
-        Axios.get("http://localhost:5000/api/Categoria")
+        Axios.get("http://192.168.4.14:5000/api/Categoria")
         .then(response => {
             console.log(response.data);
             this.setState({categorias: response.data})
