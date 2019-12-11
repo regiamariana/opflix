@@ -12,6 +12,7 @@ function App() {
       
       <Link to="/">[Login]</Link>
       <Link to="/cadastrar">[Cadastrar]</Link>
+      <Link to="/mapa">[mapa]</Link>
 
       {/* <img src={fundo} /> */}
       <div id="faixavermelha">
