@@ -20,7 +20,7 @@ export default class Filmes extends Component {
     }
 
     listarLancamentos = () => {
-        Axios.get('http://localhost:5000/api/lancamentos', {headers: {Authorization: "Bearer "+ localStorage.getItem("usuario-opflix")}})
+        Axios.get('http://192.168.5.123:5000/api/lancamentos', {headers: {Authorization: "Bearer "+ localStorage.getItem("usuario-opflix")}})
             .then(response => {
                 console.log(response.data);
                 this.setState({ lancamentos: response.data })
@@ -36,7 +36,7 @@ export default class Filmes extends Component {
 
 
     listarPorId = () =>{
-        Axios.get('http://192.168.4.14:5000/api/lancamentos/'+ this.state.id)
+        Axios.get('http://192.168.5.123:5000/api/lancamentos/'+ this.state.id)
         .then(response => {
             this.setState({lancamentos: response.data})
             console.log(this.state.lancamentos);

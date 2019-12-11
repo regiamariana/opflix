@@ -25,7 +25,7 @@ export default class Lancamentos extends Component {
     }
 
     listarLancamentos = () => {
-        Axios.get('http://192.168.4.14:5000/api/lancamentos',
+        Axios.get('http://192.168.5.123:5000/api/lancamentos',
             {
                 headers:
                 {
@@ -83,7 +83,7 @@ export default class Lancamentos extends Component {
 
     efetuarCadastro = (event) => {
         event.preventDefault();
-        Axios.post("http://192.168.4.14:5000/api/lancamentos", {
+        Axios.post("http://192.168.5.123:5000/api/lancamentos", {
             titulo: this.state.titulo,
             sinopse: this.state.sinopse,
             idcategoria: this.state.idcategoria,
